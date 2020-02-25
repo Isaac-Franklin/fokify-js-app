@@ -2,7 +2,7 @@
 
 Forkify website created from [Udemy's The Complete JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/) by Jonas Schmedtmann. Personal modifications were made to resolve functionality issues and layout concerns. Those are clarified below.
 
-## Getting started
+## Getting Started
 
 1. Download Node.js **(reminder: adjust specifications of your local machine)** and install: [Download Node.js](https://nodejs.org/en/download/)
 
