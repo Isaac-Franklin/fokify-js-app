@@ -9,10 +9,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
-  @media only screen and (max-width: 68.75em) {
-    html {
-      font-size: 50%; } }
+  font-size: 50%; }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
@@ -23,23 +20,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: calc(100vh - 2 * 4vw); }
-
-.container {
-  max-width: 120rem;
-  margin: 4vw auto;
-  background-color: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
-  display: grid;
-  grid-template-rows: 10rem minmax(100rem, auto);
-  grid-template-columns: 1.1fr 2fr 1.1fr;
-  grid-template-areas: "head head head" "list recipe shopping"; }
-  @media only screen and (max-width: 68.75em) {
-    .container {
-      width: 100%;
-      margin: 0;
-      border-radius: 0; } }
 
 .btn, .btn-small, .btn-small:link, .btn-small:visited {
   background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
@@ -154,17 +134,6 @@ body {
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
-
-.header {
-  grid-area: head;
-  background-color: #F9F5F3;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-  .header__logo {
-    margin-left: 4rem;
-    height: 4.5rem;
-    display: block; }
 
 .search {
   background-color: #fff;
@@ -490,3 +459,62 @@ body {
   .shopping__item:hover .shopping__delete {
     opacity: 1;
     visibility: visible; }
+
+.container {
+  width: 100%;
+  margin: 0;
+  border-radius: 0; 
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
+  display: flex;
+  flex-flow: column wrap;
+}
+.header {
+  grid-area: head;
+  background-color: #F9F5F3;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+  .header__logo {
+    margin-left: 4rem;
+    height: 4.5rem;
+    display: block;
+}
+.pic,
+.search,
+.likes {
+    margin: 4% 0;
+}
+
+@media only screen and (min-width: 40em) {
+    .header {
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .container {
+      max-width: 120rem;
+      margin: 4vw auto;
+      border-radius: 6px;
+      display: grid;
+      grid-template-rows: 10rem minmax(100rem, auto);
+      grid-template-columns: 1.1fr 2fr 1.1fr;
+      grid-template-areas: 
+        "head head head" 
+        "list recipe shopping"; 
+    }
+    .pic,
+    .search,
+    .likes {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 68.75em) {
+    html {
+      font-size: 62.5%;
+    }
+}
