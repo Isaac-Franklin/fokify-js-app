@@ -5,6 +5,7 @@ Forkify website created from [Udemy's The Complete JavaScript Course](https://ww
 ## Getting started
 
 1. Download Node.js **(reminder: adjust specifications of your local machine)** and install: [Download Node.js](https://nodejs.org/en/download/)
+
     *Note: Includes Node Package Manager (npm)*
 
 2. Download the zip file from this repo: [Download zip](https://github.com/nicoleiocana/forkify/archive/master.zip)
@@ -42,13 +43,9 @@ As of February 2020, Jonas has updated his javaScript course. I have not viewed 
 | recipe.publisher is not accessible from    getResults async function                                                                                                | ```await Promise.all(this.result.map(async recipe => { const res = await axios(`${proxy}/https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${key}`); recipe.publisher = res.data.sourceName; }));``` in *Search.js* in the *models* folder. This code is commented out due to 30 calls (points) made per search                                                                                                      |
 | calcTime(), calcServings(), and parseIngredients() are no longer needed| the code has been commented out in the *Recipe.js* file. The updated function is `parseIngredients() { const newIngredients = this.ingredients.map(el => { let rObj = {}; rObj.count = el.amount; rObj.unit = el.unit; rObj.ingredient = el.originalName; return rObj; }); this.ingredients = newIngredients; }`. Note, any references to the old functions have been commented out|
 
----
-
 ## Broken Mobile Layout
 
 ![broken mobile](https://imgur.com/tZeKerm.png)
-
----
 
 ## Screenshots
 
