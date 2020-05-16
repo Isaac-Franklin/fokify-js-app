@@ -10,7 +10,7 @@ const formatCount = count => {
     
     // count = 2.5  --> 2 1/2
     // count = 0.5  --> 1/2
-    const newCount = Math.round(count * 10000) / 10000; //10000 for 4 decimal places
+    const newCount = Math.round(count * 1000) / 1000; //10000 for 4 decimal places
     const [int, dec] = newCount.toString().split('.').map(el => parseInt(el, 10))
 
     if (!dec) return newCount;

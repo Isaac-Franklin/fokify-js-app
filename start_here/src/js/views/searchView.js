@@ -16,7 +16,10 @@ export const highlightSelected = id => {
   resultsArr.forEach(el => {
     el.classList.remove('results__link--active');
   });
-  document.querySelector(`.results__link[href*="${id}"]`).classList.add('results__link--active');
+  // when displaying recipe from favorites, error occurs when recipe is not in results list
+  if (document.querySelector(`.results__link[href*="${id}"]`)) {
+    document.querySelector(`.results__link[href*="${id}"]`).classList.add('results__link--active');
+  }
 }
 
 /*
