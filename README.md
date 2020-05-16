@@ -14,7 +14,7 @@ Forkify website created from [Udemy's The Complete JavaScript Course](https://ww
     
 3. The development files are all located in the start_here folder.
 
-4. Open up your terminal/command prompt and navigate to your *start_here* folder. Type in `$ npm run start` to start your webpack server and begin development.
+4. Open up your terminal/command prompt and navigate to your *start_here* folder. Install dependencies with `$ npm install` & type `$ npm run start` to start your webpack server and begin development.
 
 5. Located in the src file, on line 434 in index.html, change `{%NAME%}` with your first and last name.
 
